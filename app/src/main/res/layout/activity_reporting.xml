@@ -1,13 +1,413 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_reporting"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.rafi.patriot.activities.ReportingActivity">
+    android:background="@color/White"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <customfonts.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Report"
+        android:textColor="@color/lightgrey"
+        android:textSize="@dimen/text" />
+
+    <customfonts.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="CATEGORY"
+        android:textColor="@color/lightgrey"
+        android:textSize="@dimen/sub_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_ccv"
+        android:orientation="horizontal">
+
+
+        <!--<customfonts.MyTextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:paddingRight="6dp"-->
+        <!--android:text="DEPT"-->
+        <!--android:textColor="@color/lightgrey"-->
+        <!--android:textSize="@dimen/sub_text" />-->
+
+        <!--<customfonts.MyEditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="#00000000"-->
+        <!--android:maxLength="5"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:lines="1"-->
+        <!--android:paddingRight="5dp"-->
+        <!--android:textColor="@color/text"-->
+        <!--android:textColorHint="@color/text"-->
+        <!--android:textSize="@dimen/text" />-->
+
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+
+    </LinearLayout>
+
+    <customfonts.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="SUB CATEGORY"
+        android:textColor="@color/lightgrey"
+        android:textSize="@dimen/sub_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_ccv"
+        android:orientation="horizontal">
+
+
+        <!--<customfonts.MyTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+
+            <!--android:paddingRight="6dp"-->
+            <!--android:text="CCV"-->
+            <!--android:textColor="@color/lightgrey"-->
+            <!--android:textSize="@dimen/sub_text" />-->
+
+        <!--<customfonts.MyEditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="#00000000"-->
+        <!--android:inputType="number"-->
+        <!--android:lines="1"-->
+        <!--android:maxLength="3"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:paddingRight="5dp"-->
+        <!--android:textColor="@color/text"-->
+        <!--android:textColorHint="@color/text"-->
+        <!--android:textSize="@dimen/text" />-->
+
+        <Spinner
+            android:id="@+id/spSubCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:backgroundTint="@color/lightgrey" />-->
+
+    <!--<customfonts.MyTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="4543   34**   ****   3376" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/bg_ccv"-->
+    <!--android:padding="5dp">-->
+
+    <!--<customfonts.MyEditText-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#00000000"-->
+    <!--android:hint="CCV"-->
+    <!--android:inputType="number"-->
+    <!--android:maxLength="3"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:paddingRight="5dp"-->
+    <!--android:textColor="@color/text"-->
+    <!--android:textColorHint="@color/lightgrey"-->
+    <!--android:textSize="11dp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:layout_weight="1.9"-->
+    <!--android:gravity="right">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="35dp"-->
+    <!--android:layout_height="22dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:src="@drawable/visa"-->
+
+    <!--/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="16dp" />-->
+
+    <!--<customfonts.MyTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_weight="1"-->
+
+    <!--android:text="3376   34**   ****   4333" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:background="@drawable/bg_ccv"-->
+    <!--android:padding="5dp">-->
+
+    <!--<customfonts.MyEditText-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#00000000"-->
+    <!--android:hint="CCV"-->
+    <!--android:inputType="number"-->
+    <!--android:maxLength="3"-->
+    <!--android:paddingLeft="5dp"-->
+    <!--android:paddingRight="5dp"-->
+    <!--android:textColor="@color/text"-->
+    <!--android:textColorHint="@color/lightgrey"-->
+    <!--android:textSize="11dp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:layout_weight="1.9"-->
+    <!--android:gravity="right">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="35dp"-->
+    <!--android:layout_height="22dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:src="@drawable/master"-->
+
+    <!--/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginLeft="135dp"-->
+        <!--android:layout_marginRight="135dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:background="@color/lightgrey"></View>-->
+
+
+    <customfonts.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="SUBJECT"
+        android:textColor="@color/lightgrey"
+        android:textSize="@dimen/sub_text" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_ccv"
+        android:orientation="horizontal"
+        android:padding="13dp">
+
+
+        <!--<customfonts.MyTextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+
+        <!--android:paddingRight="11dp"-->
+        <!--android:text="CARD NUMBER"-->
+        <!--android:textColor="@color/lightgrey"-->
+        <!--android:textSize="@dimen/sub_text" />-->
+
+        <customfonts.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="20"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/text" />
+
+
+        <!--********you have to code at java side to detect perticular card (visa,mastercard or else)********-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="35dp"-->
+        <!--android:layout_height="22dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:src="@drawable/master" />-->
+
+
+    </LinearLayout>
+
+    <customfonts.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="DESCRIPTION"
+        android:textColor="@color/lightgrey"
+        android:textSize="@dimen/sub_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+
+        android:background="@drawable/bg_ccv"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+
+        <!--<customfonts.MyTextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center|top"-->
+
+        <!--android:paddingRight="6dp"-->
+        <!--android:text="NAME ON CARD"-->
+        <!--android:textColor="@color/lightgrey"-->
+        <!--android:textSize="@dimen/sub_text" />-->
+
+        <customfonts.MyEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:lines="5"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColor="@color/text"
+            android:textColorHint="@color/text"
+            android:textSize="@dimen/text"
+            android:gravity="top|left"
+            android:id="@+id/myEditText" />
+
+
+    </LinearLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!---->
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_pay"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="SEND"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text" />
+    </LinearLayout>
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="350dp"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginTop="21dp"-->
+    <!--android:background="@drawable/img" />-->
+
+</LinearLayout>
+
+
